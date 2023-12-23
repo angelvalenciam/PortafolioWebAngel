@@ -1,0 +1,149 @@
+:root {
+    --PrincipalBg: #88AB8E;
+    --Secundario: #AFC8AD;
+    --SecundarioClaro: #EEE7DA;
+    --Fuente: #F2F1EB;
+    --colorEnlaces: #000000;
+
+    /* Funtes */
+    --fuentePrincipal: 'VT323', monospace;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: var(--PrincipalBg);
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 1.8rem;
+
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: var(--colorEnlaces);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation */
+.contNav {
+    background-color: var(--SecundarioClaro);
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 100%;
+    border-radius: .7rem;
+}
+
+.contNav__navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.contNav__enlaces {
+    color: var(--colorEnlaces);
+    font-size: 2rem;
+    padding: 1rem;
+    display: block;
+}
+
+.contNav__enlaces:hover {
+    color: var(--Fuente);
+    background-color: var(--PrincipalBg);
+    border-radius: .6rem;
+    transition: .2s;
+}
+
+/* Responsive desing */
+
+@media (min-width:768px) {
+    .contNav__navigation {
+        flex-direction: row;
+    }
+}
+
+/* Centro de la pagina */
+
+.container__main {
+    align-items: center;
+    background-color: var(--Secundario);
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 3rem;
+    margin: 3rem auto;
+    border-radius: .6rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+}
+
+@media (min-width: 768px) {
+    .container__main {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.container__imagen {
+    grid-row: 1/1;
+    border-radius: 50%;
+    margin: 1rem auto;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .2);
+}
+
+@media (min-width: 768px) {
+    .container__imagen {
+        grid-row: 1/1;
+    }
+}
+
+.container__desc {
+    grid-column: -2/-3;
+    margin: 2rem 2rem 3rem 3rem;
+    font-size: 2.9rem;
+    background-color: var(--Fuente);
+    border-radius: .5rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .3);
+
+}
+
+.container__descripcion {
+    font-size: 3rem;
+    text-align: left;
+    padding: 1rem;
+}
+
+@media (min-width:768px) {
+    .container__desc {
+        grid-row: -1/-1;
+    }
+}
